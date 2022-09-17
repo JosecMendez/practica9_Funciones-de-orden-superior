@@ -1,0 +1,33 @@
+suma = lambda x, y: x + y
+
+print(suma(3,5))
+
+lista1 = [11,22,33,44,55]
+lista2 = [2,3,4,5,6,7]
+lista3 = []
+
+for i in range(len(lista1)):
+    lista3.append(lista1[i]+lista2[i])
+
+print(lista3)
+
+frutas = ['Apple', 'pineapple', 'kiwi', 'almonds' ]
+def empieza_con_A(palabra):
+    return palabra[0] == 'A' or palabra[0] == 'a'
+
+empieza_con_a = list(map(lambda a:a[0] =='a' or a[0] == 'A', frutas))
+print(empieza_con_a)
+
+from functools import reduce
+
+lista = [1,23,4,4,7,4,7,9,4,6,8,9,2,56]
+sumadelista = 0
+newlist = list(filter(lambda x:x %3 == 0, lista))
+print(newlist)
+
+for i in lista:
+    sumadelista+=i
+print(sumadelista)
+
+suma = reduce(lambda x,y: x+y, lista)
+print(suma)
