@@ -1,0 +1,33 @@
+print("Ejercicio1")
+#Realice un programa que pregunte aleatoriamente una multiplicación. El programa debe indicar si la respuesta ha sido correcta o no (en caso que la respuesta sea incorrecta el programa debe indicar cuál es la correcta). El programa preguntará 10 multiplicaciones, y al finalizar mostrará el número de aciertos. 
+import random
+buenas = 0
+for i in range(10):
+    n1 = random.randint(1, 100)
+    n2 = random.randint(1, 100)
+    respuesta = n1 * n2
+    r = int(input(f'Cuanto es {n1} x {n2}  -> '))
+    if r == respuesta:
+        print('Te la sabes')
+        buenas = buenas + 1
+    else:
+        print(f'No te la sabes, la correcta es {respuesta}')
+print(f'Tuviste {buenas} buenas')
+
+print("Ejercicio2")
+#Obtener el cuadrado de todos los elementos en la lista
+Lista=[1,2,3,4,5,6,7,8,9,10]
+cuadrado = list(map(lambda a:a*a,Lista))
+print(cuadrado)
+
+print("Ejercicio3")
+#Obtener la cantidad de elementos mayores a 5 en la tupla.
+tupla = (5,2,6,7,8,10,77,55,2,1,30,4,2,3)
+mayores = list(filter(lambda z:z >5,tupla))
+print(mayores)
+
+print("Ejercicio4")
+# Obtener la suma de todos los elementos en la lista
+lista = [11,22,33,44,55]
+suma = reduce(lambda i,j: i+j, lista)
+print(suma)
